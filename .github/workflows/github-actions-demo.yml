@@ -19,4 +19,4 @@ jobs:
       - uses: actions/checkout@v3
       - name: Run tests
         working-directory: ./insecure
-        run: npm install; npm audit; npm audit --force
+        run: npm install; npm audit; npm audit fix --force
