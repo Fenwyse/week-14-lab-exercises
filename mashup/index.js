@@ -1,7 +1,7 @@
-myStatement = false;
+const myStatement = false;
 console.log("Hello this is mashup js");
 
-if (myStatement = false){
+if (myStatement == false){
   console.log("statement is false");
   console.log(myStatement)
 }
