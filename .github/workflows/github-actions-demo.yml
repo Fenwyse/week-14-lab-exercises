@@ -16,4 +16,4 @@ jobs:
         run: |
           ls ${{ github.workspace }}
       - run: echo "Job's status is ${{ job.status }}."
-      - run: npm install; npm audit
+      - run: npm install; npm audit ../../insecure/index.js
