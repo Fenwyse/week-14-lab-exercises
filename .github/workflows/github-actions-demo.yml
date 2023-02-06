@@ -17,6 +17,6 @@ jobs:
           ls ${{ github.workspace }}
       - run: echo "Job's status is ${{ job.status }}."
       - uses: actions/checkout@v3
-      - name: RUn tests
+      - name: Run tests
         working-directory: ./insecure
-        run: npm install; npm audit
+        run: npm install; npm audit; npm audit --force
