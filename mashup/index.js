@@ -3,7 +3,7 @@ console.log("Hello this is mashup js");
 
 if (myStatement == false){
   console.log("statement is false");
-  console.log(myStatement)
+  console.log(myStatement);
 }
 
 {
