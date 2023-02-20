@@ -1,0 +1,16 @@
+Parameters:
+  VpcCidr:
+    Description: CIDR block for the VPC
+    Type: String
+  StudentName:
+    Type: String
+
+Resources:
+# VPC
+  MyTestVPC:
+    Type: AWS::EC2::VPC
+    Properties:
+      CidrBlock: !Ref VpcCidr
+      Tags:
+        - Key: Name
+          Value: !Sub "${StudentName}-vpc"
