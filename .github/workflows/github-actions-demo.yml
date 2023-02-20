@@ -16,11 +16,27 @@ jobs:
         run: |
           ls ${{ github.workspace }}
       - run: echo "Job's status is ${{ job.status }}."
+  Run-tests:
+    runs-on: ubuntu-latest
+    steps:
       - uses: actions/checkout@v3
       - name: Run tests
         working-directory: ./insecure
         run: npm install; npm audit
+  JS-tests:
+    runs-on: ubuntu-latest
+    steps:
       - uses: actions/checkout@v3
       - name: Detect messed up JS
         working-directory: ./mashup
         run: npm install eslint ; npm run lint
+  Unit-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Run unit testing
+        working-directory: unittesting
+        run: npm install; npm run test
+      #- name: Run unit testing
+      #  working-directory: ./unittesting
+      #  run: npm test
