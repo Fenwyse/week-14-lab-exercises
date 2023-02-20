@@ -38,6 +38,13 @@ jobs:
         working-directory: unittesting
         run: npm install; npm run test
   Run-deploy-script:
+    - name: Configure AWS credentials
+      id: creds
+      uses: aws-actions/configure-aws-credentials@v1
+      with:
+        aws-access-key-id: ${{ secrets.ACCESS_KEY }}
+        aws-secret-access-key: ${{ secrets.PRIV_KEY }}
+        aws-region: ${{ github.event.inputs.region }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
