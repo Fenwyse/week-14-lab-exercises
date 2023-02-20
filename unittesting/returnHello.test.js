@@ -23,7 +23,9 @@ test("returns a valid French hello", () => {
 test("returns a valid Bulgarian hello", () => {
   expect(hello.generateHelloString('bulgarian')).toBe('Здравейте');
 });
-
+test("returns a valid Bulgarian hello", () => {
+  expect(hello.generateHelloString('spanish')).toBe('hola');
+});
 test("Throws on unknown languages", () => {
   expect(() => { hello.generateHelloString('norge') }).toThrow(Error(`Unknown language norge`))
 });
