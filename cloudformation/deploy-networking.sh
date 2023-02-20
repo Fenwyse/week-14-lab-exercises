@@ -10,7 +10,7 @@ set -eo pipefail
 
 readonly STUDENT_NAME="j-red"
 readonly STACK_NAME="${STUDENT_NAME}-networking"
-readonly TEMPLATE_FILE="$(dirname "${BASH_SOURCE[0]}")/templates/networking.yml"
+readonly TEMPLATE_FILE="$(dirname "${BASH_SOURCE[0]}")/templates/create-vpc.yml"
 readonly AWS_DEFAULT_REGION="eu-west-2"
 
 aws cloudformation deploy \
