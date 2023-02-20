@@ -42,5 +42,5 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Deploy VPC
-        working-directory: cloudformation
+        working-directory: cloudformation/templates
         run: ./deploy-networking.sh
