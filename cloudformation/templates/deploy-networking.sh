@@ -3,15 +3,15 @@
 set -eo pipefail
 
 ## Deploys the networking stack
-if [[ -z "${STUDENT_NAME}" ]]; then
-  echo "STUDENT_NAME is not set"
-  exit 1
-fi
+##if [[ -z "${STUDENT_NAME}" ]]; then
+##  echo "STUDENT_NAME is not set"
+##  exit 1
+##fi
 
+readonly STUDENT_NAME="j-red"
 readonly STACK_NAME="${STUDENT_NAME}-networking"
 readonly TEMPLATE_FILE="$(dirname "${BASH_SOURCE[0]}")/templates/networking.yml"
 readonly AWS_DEFAULT_REGION="eu-west-2"
-readonly STUDENT_NAME="j-red"
 
 aws cloudformation deploy \
   --stack-name "${STACK_NAME}" \
